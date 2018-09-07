@@ -1,0 +1,134 @@
+# github.com/beevik/etree v0.0.0-20161216042344-4cd0dd976db8
+github.com/beevik/etree
+# github.com/beorn7/perks v0.0.0-20160229213445-3ac7bf7a47d1
+github.com/beorn7/perks/quantile
+# github.com/cockroachdb/cockroach-go v0.0.0-20160916181719-31611c0501c8
+github.com/cockroachdb/cockroach-go/crdb
+# github.com/coreos/etcd v3.2.9+incompatible
+github.com/coreos/etcd/clientv3
+github.com/coreos/etcd/clientv3/namespace
+github.com/coreos/etcd/pkg/transport
+github.com/coreos/etcd/auth/authpb
+github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes
+github.com/coreos/etcd/etcdserver/etcdserverpb
+github.com/coreos/etcd/mvcc/mvccpb
+github.com/coreos/etcd/pkg/tlsutil
+# github.com/coreos/go-oidc v0.0.0-20170307191026-be73733bb8cc
+github.com/coreos/go-oidc
+# github.com/felixge/httpsnoop v1.0.0
+github.com/felixge/httpsnoop
+# github.com/ghodss/yaml v0.0.0-20161020005002-bea76d6a4713
+github.com/ghodss/yaml
+# github.com/go-sql-driver/mysql v0.0.0-20160802113842-0b58b37b664c
+github.com/go-sql-driver/mysql
+# github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf
+github.com/golang/protobuf/proto
+github.com/golang/protobuf/ptypes/any
+# github.com/gorilla/context v1.1.1
+github.com/gorilla/context
+# github.com/gorilla/handlers v1.4.0
+github.com/gorilla/handlers
+# github.com/gorilla/mux v1.6.2
+github.com/gorilla/mux
+# github.com/grpc-ecosystem/go-grpc-prometheus v0.0.0-20170826090648-0dafe0d496ea
+github.com/grpc-ecosystem/go-grpc-prometheus
+# github.com/gtank/cryptopasta v0.0.0-20170601214702-1f550f6f2f69
+github.com/gtank/cryptopasta
+# github.com/inconshreveable/mousetrap v1.0.0
+github.com/inconshreveable/mousetrap
+# github.com/jonboulle/clockwork v0.0.0-20160907122059-bcac9884e750
+github.com/jonboulle/clockwork
+# github.com/kylelemons/godebug v0.0.0-20160406211939-eadb3ce320cb
+github.com/kylelemons/godebug/pretty
+github.com/kylelemons/godebug/diff
+# github.com/lib/pq v0.0.0-20160831222520-50761b0867bd
+github.com/lib/pq
+github.com/lib/pq/oid
+# github.com/mattn/go-sqlite3 v1.9.0
+github.com/mattn/go-sqlite3
+# github.com/matttproud/golang_protobuf_extensions v0.0.0-20150406173934-fc2b8d3a73c4
+github.com/matttproud/golang_protobuf_extensions/pbutil
+# github.com/pquerna/cachecontrol v0.0.0-20160421231612-c97913dcbd76
+github.com/pquerna/cachecontrol
+github.com/pquerna/cachecontrol/cacheobject
+# github.com/prometheus/client_golang v0.9.0-pre1
+github.com/prometheus/client_golang/prometheus
+github.com/prometheus/client_golang/prometheus/promhttp
+# github.com/prometheus/client_model v0.0.0-20150212101744-fa8ad6fec335
+github.com/prometheus/client_model/go
+# github.com/prometheus/common v0.0.0-20170220103846-49fee292b27b
+github.com/prometheus/common/expfmt
+github.com/prometheus/common/model
+github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg
+# github.com/prometheus/procfs v0.0.0-20170216223256-a1dba9ce8bae
+github.com/prometheus/procfs
+github.com/prometheus/procfs/xfs
+# github.com/russellhaering/goxmldsig v0.0.0-20180430223755-7acd5e4a6ef7
+github.com/russellhaering/goxmldsig
+github.com/russellhaering/goxmldsig/etreeutils
+github.com/russellhaering/goxmldsig/types
+# github.com/sirupsen/logrus v1.0.6
+github.com/sirupsen/logrus
+# github.com/spf13/cobra v0.0.3
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.2
+github.com/spf13/pflag
+# golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
+golang.org/x/crypto/bcrypt
+golang.org/x/crypto/ssh/terminal
+golang.org/x/crypto/blowfish
+# golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
+golang.org/x/net/context
+golang.org/x/net/http2
+golang.org/x/net/trace
+golang.org/x/net/http/httpguts
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/internal/timeseries
+golang.org/x/net/context/ctxhttp
+# golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
+golang.org/x/oauth2
+golang.org/x/oauth2/github
+golang.org/x/oauth2/internal
+# golang.org/x/sys v0.0.0-20180906133057-8cf3aee42992
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.0.0-20170401064109-f4b4367115ec
+golang.org/x/text/secure/bidirule
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+golang.org/x/text/transform
+# google.golang.org/appengine v0.0.0-20160621060416-267c27e74922
+google.golang.org/appengine/urlfetch
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/urlfetch
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/remote_api
+# google.golang.org/genproto v0.0.0-20170404132009-411e09b969b1
+google.golang.org/genproto/googleapis/rpc/status
+# google.golang.org/grpc v0.0.0-20170413033559-0e8b58d22f34
+google.golang.org/grpc
+google.golang.org/grpc/credentials
+google.golang.org/grpc/codes
+google.golang.org/grpc/grpclog
+google.golang.org/grpc/internal
+google.golang.org/grpc/keepalive
+google.golang.org/grpc/metadata
+google.golang.org/grpc/naming
+google.golang.org/grpc/peer
+google.golang.org/grpc/stats
+google.golang.org/grpc/status
+google.golang.org/grpc/tap
+google.golang.org/grpc/transport
+# gopkg.in/asn1-ber.v1 v1.0.0-20150924051756-4e86f4367175
+gopkg.in/asn1-ber.v1
+# gopkg.in/ldap.v2 v2.3.0
+gopkg.in/ldap.v2
+# gopkg.in/square/go-jose.v2 v2.0.0
+gopkg.in/square/go-jose.v2
+gopkg.in/square/go-jose.v2/cipher
+gopkg.in/square/go-jose.v2/json
+# gopkg.in/yaml.v2 v2.0.0-20160301204022-a83829b6f129
+gopkg.in/yaml.v2
