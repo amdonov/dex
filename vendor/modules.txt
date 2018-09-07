@@ -1,3 +1,12 @@
+# github.com/allegro/bigcache v1.0.0
+github.com/allegro/bigcache
+github.com/allegro/bigcache/queue
+# github.com/amdonov/lite-idp v0.3.0
+github.com/amdonov/lite-idp/saml
+github.com/amdonov/lite-idp/sp
+github.com/amdonov/lite-idp/store
+# github.com/amdonov/xmlsig v0.1.0
+github.com/amdonov/xmlsig
 # github.com/beevik/etree v0.0.0-20161216042344-4cd0dd976db8
 github.com/beevik/etree
 # github.com/beorn7/perks v0.0.0-20160229213445-3ac7bf7a47d1
@@ -21,9 +30,11 @@ github.com/felixge/httpsnoop
 github.com/ghodss/yaml
 # github.com/go-sql-driver/mysql v0.0.0-20160802113842-0b58b37b664c
 github.com/go-sql-driver/mysql
-# github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf
+# github.com/golang/protobuf v0.0.0-20180122221610-c65a0412e71e
 github.com/golang/protobuf/proto
 github.com/golang/protobuf/ptypes/any
+# github.com/google/uuid v0.0.0-20161128191214-064e2069ce9c
+github.com/google/uuid
 # github.com/gorilla/context v1.1.1
 github.com/gorilla/context
 # github.com/gorilla/handlers v1.4.0
@@ -93,7 +104,7 @@ golang.org/x/oauth2/internal
 # golang.org/x/sys v0.0.0-20180906133057-8cf3aee42992
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/text v0.0.0-20170401064109-f4b4367115ec
+# golang.org/x/text v0.0.0-20171227012246-e19ae1496984
 golang.org/x/text/secure/bidirule
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
@@ -130,5 +141,5 @@ gopkg.in/ldap.v2
 gopkg.in/square/go-jose.v2
 gopkg.in/square/go-jose.v2/cipher
 gopkg.in/square/go-jose.v2/json
-# gopkg.in/yaml.v2 v2.0.0-20160301204022-a83829b6f129
+# gopkg.in/yaml.v2 v2.0.0
 gopkg.in/yaml.v2
