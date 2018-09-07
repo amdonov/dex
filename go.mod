@@ -1,6 +1,7 @@
 module github.com/dexidp/dex
 
 require (
+	github.com/amdonov/lite-idp v0.3.0
 	github.com/beevik/etree v0.0.0-20161216042344-4cd0dd976db8
 	github.com/beorn7/perks v0.0.0-20160229213445-3ac7bf7a47d1 // indirect
 	github.com/cockroachdb/cockroach-go v0.0.0-20160916181719-31611c0501c8
@@ -9,13 +10,12 @@ require (
 	github.com/felixge/httpsnoop v1.0.0
 	github.com/ghodss/yaml v0.0.0-20161020005002-bea76d6a4713
 	github.com/go-sql-driver/mysql v0.0.0-20160802113842-0b58b37b664c
-	github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf
+	github.com/golang/protobuf v0.0.0-20180122221610-c65a0412e71e
 	github.com/gorilla/context v1.1.1 // indirect
 	github.com/gorilla/handlers v1.4.0
 	github.com/gorilla/mux v1.6.2
 	github.com/grpc-ecosystem/go-grpc-prometheus v0.0.0-20170826090648-0dafe0d496ea
 	github.com/gtank/cryptopasta v0.0.0-20170601214702-1f550f6f2f69
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jonboulle/clockwork v0.0.0-20160907122059-bcac9884e750 // indirect
 	github.com/kylelemons/godebug v0.0.0-20160406211939-eadb3ce320cb
 	github.com/lib/pq v0.0.0-20160831222520-50761b0867bd
@@ -34,12 +34,10 @@ require (
 	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
 	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
 	golang.org/x/sys v0.0.0-20180906133057-8cf3aee42992 // indirect
-	golang.org/x/text v0.0.0-20170401064109-f4b4367115ec // indirect
 	google.golang.org/appengine v0.0.0-20160621060416-267c27e74922 // indirect
 	google.golang.org/genproto v0.0.0-20170404132009-411e09b969b1 // indirect
 	google.golang.org/grpc v0.0.0-20170413033559-0e8b58d22f34
 	gopkg.in/asn1-ber.v1 v1.0.0-20150924051756-4e86f4367175 // indirect
 	gopkg.in/ldap.v2 v2.3.0
 	gopkg.in/square/go-jose.v2 v2.0.0
-	gopkg.in/yaml.v2 v2.0.0-20160301204022-a83829b6f129 // indirect
 )

@@ -13,6 +13,7 @@ import (
 	"github.com/dexidp/dex/connector/microsoft"
 	"github.com/dexidp/dex/connector/mock"
 	"github.com/dexidp/dex/connector/oidc"
+	"github.com/dexidp/dex/connector/saml2"
 	"github.com/dexidp/dex/connector/saml"
 	"github.com/dexidp/dex/server"
 )
@@ -42,8 +43,8 @@ func main() {
 		"authproxy":    func() server.ConnectorConfig { return new(authproxy.Config) },
 		"linkedin":     func() server.ConnectorConfig { return new(linkedin.Config) },
 		"microsoft":    func() server.ConnectorConfig { return new(microsoft.Config) },
-		// Keep around for backwards compatibility.
-		"samlExperimental": func() server.ConnectorConfig { return new(saml.Config) },
+		// Use the artifact binding connector
+		"saml2": func() server.ConnectorConfig { return new(saml2.Config) },
 	}
 	if err := commandRoot().Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
