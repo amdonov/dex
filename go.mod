@@ -10,11 +10,11 @@ require (
 	github.com/ghodss/yaml v0.0.0-20161020005002-bea76d6a4713
 	github.com/go-sql-driver/mysql v0.0.0-20160802113842-0b58b37b664c
 	github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf
-	github.com/gorilla/context v0.0.0-20160525203319-aed02d124ae4
-	github.com/gorilla/handlers v0.0.0-20161206055144-3a5767ca75ec
-	github.com/gorilla/mux v0.0.0-20160605233521-9fa818a44c2b
+	github.com/gorilla/context v1.1.1
+	github.com/gorilla/handlers v1.4.0
+	github.com/gorilla/mux v1.6.2
 	github.com/grpc-ecosystem/go-grpc-prometheus v0.0.0-20170826090648-0dafe0d496ea
-	github.com/gtank/cryptopasta v0.0.0-20160720052843-e7e23673cac3
+	github.com/gtank/cryptopasta v0.0.0-20170601214702-1f550f6f2f69
 	github.com/inconshreveable/mousetrap v1.0.0
 	github.com/jonboulle/clockwork v0.0.0-20160907122059-bcac9884e750
 	github.com/kylelemons/godebug v0.0.0-20160406211939-eadb3ce320cb
@@ -26,14 +26,14 @@ require (
 	github.com/prometheus/client_model v0.0.0-20150212101744-fa8ad6fec335
 	github.com/prometheus/common v0.0.0-20170220103846-49fee292b27b
 	github.com/prometheus/procfs v0.0.0-20170216223256-a1dba9ce8bae
-	github.com/russellhaering/goxmldsig v0.0.0-20170324122954-eaac44c63fe0
-	github.com/sirupsen/logrus v0.0.0-20170713114250-a3f95b5c4235
-	github.com/spf13/cobra v0.0.0-20160615143614-bc81c21bd0d8
-	github.com/spf13/pflag v0.0.0-20160610190902-367864438f1b
-	golang.org/x/crypto v0.0.0-20160711182412-2c99acdd1e9b
-	golang.org/x/net v0.0.0-20170413175226-5602c733f70a
-	golang.org/x/oauth2 v0.0.0-20160718223228-08c8d727d239
-	golang.org/x/sys v0.0.0-20151211033651-833a04a10549
+	github.com/russellhaering/goxmldsig v0.0.0-20180430223755-7acd5e4a6ef7
+	github.com/sirupsen/logrus v1.0.6
+	github.com/spf13/cobra v0.0.3
+	github.com/spf13/pflag v1.0.2 // indirect
+	golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
+	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
+	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
+	golang.org/x/sys v0.0.0-20180906133057-8cf3aee42992
 	golang.org/x/text v0.0.0-20170401064109-f4b4367115ec
 	google.golang.org/appengine v0.0.0-20160621060416-267c27e74922
 	google.golang.org/genproto v0.0.0-20170404132009-411e09b969b1
