@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"crypto/tls"
 	"crypto/x509"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -164,6 +165,19 @@ func configureTLS(c *Config) (*tls.Config, error) {
 	}
 	tlsConfig.BuildNameToCertificate()
 	return tlsConfig, nil
+}
+
+func (c *samlConnector) UserInfo(nameID string, w http.ResponseWriter) {
+	// TODO run an attribute query to retrieve user information from the IdP
+	enc := json.NewEncoder(w)
+	sub := &struct {
+		First string `json:"first"`
+		Last  string `json:"last"`
+	}{
+		First: "John",
+		Last:  "Doe",
+	}
+	enc.Encode(sub)
 }
 
 type artfactBuffer struct {

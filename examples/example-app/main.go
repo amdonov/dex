@@ -317,4 +317,17 @@ func (a *app) handleCallback(w http.ResponseWriter, r *http.Request) {
 	json.Indent(buff, []byte(claims), "", "  ")
 
 	renderToken(w, a.redirectURI, rawIDToken, token.RefreshToken, buff.Bytes())
+	userinfo, err := a.provider.UserInfo(ctx, oauth2.StaticTokenSource(token))
+	if err != nil {
+		http.Error(w, "Failed to get userinfo: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	sub := &struct {
+		First string `json:"first"`
+		Last  string `json:"last"`
+	}{}
+	fmt.Fprintln(w, "UserInfo:")
+	userinfo.Claims(sub)
+	enc := json.NewEncoder(w)
+	enc.Encode(sub)
 }

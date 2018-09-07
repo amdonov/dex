@@ -332,8 +332,10 @@ func (s *Server) handleConnectorCallback(w http.ResponseWriter, r *http.Request)
 	switch r.Method {
 	case "GET": // OAuth2 callback
 		if authID = r.URL.Query().Get("state"); authID == "" {
-			s.renderError(w, http.StatusBadRequest, "User session error.")
-			return
+			if authID = r.URL.Query().Get("RelayState"); authID == "" {
+				s.renderError(w, http.StatusBadRequest, "User session error.")
+				return
+			}
 		}
 	case "POST": // SAML POST binding
 		if authID = r.PostFormValue("RelayState"); authID == "" {
@@ -1013,8 +1015,22 @@ func (s *Server) handleUserInfo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(verified)
+	// Get the sub from the json
+	sub := &struct {
+		ID string `json:"sub"`
+	}{}
+	json.Unmarshal(verified, sub)
+	// Unmarshal it to get the id
+	tokenSubject := &internal.IDTokenSubject{}
+	internal.Unmarshal(sub.ID, tokenSubject)
+	conn := s.connectors[tokenSubject.ConnId]
+	writer, ok := conn.Connector.(connector.UserInfoConnector)
+	if ok {
+		writer.UserInfo(tokenSubject.UserId, w)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(verified)
+	}
 }
 
 func (s *Server) verify(token string) ([]byte, error) {
