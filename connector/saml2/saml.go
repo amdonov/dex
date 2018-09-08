@@ -38,6 +38,7 @@ type Config struct {
 	AssertionConsumerServiceURL string        `json:"assertionConsumerServiceURL"`
 	IDPArtifactEndpoint         string        `json:"artifactEndpoint"`
 	IDPRedirectEndpoint         string        `json:"redirectEndpoint"`
+	IDPQueryEndpoint            string        `json:"queryEndpoint"`
 	Timeout                     time.Duration `json:"timeout"`
 	Certificate                 string        `json:"certificate"`
 	Key                         string        `json:"key"`
@@ -62,6 +63,7 @@ func (c *Config) Open(id string, logger logrus.FieldLogger) (connector.Connector
 		{"key", c.Key},
 		{"emailAttr", c.EmailAttr},
 		{"entityID", c.NameAttr},
+		{"queryEndpoint", c.IDPQueryEndpoint},
 	}
 
 	for _, field := range requiredFields {
@@ -78,6 +80,7 @@ func (c *Config) Open(id string, logger logrus.FieldLogger) (connector.Connector
 		AssertionConsumerServiceURL: c.AssertionConsumerServiceURL,
 		IDPArtifactEndpoint:         c.IDPArtifactEndpoint,
 		IDPRedirectEndpoint:         c.IDPRedirectEndpoint,
+		IDPQueryEndpoint:            c.IDPQueryEndpoint,
 		Timeout:                     c.Timeout,
 		TLSConfig:                   tlsConfigClient,
 	})
@@ -167,17 +170,33 @@ func configureTLS(c *Config) (*tls.Config, error) {
 	return tlsConfig, nil
 }
 
+// UserInfo writes all attributes returned from SAML Attribute Query as json
 func (c *samlConnector) UserInfo(nameID string, w http.ResponseWriter) {
-	// TODO run an attribute query to retrieve user information from the IdP
-	enc := json.NewEncoder(w)
-	sub := &struct {
-		First string `json:"first"`
-		Last  string `json:"last"`
-	}{
-		First: "John",
-		Last:  "Doe",
+	assertion, err := c.serviceProvider.Query(nameID)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
-	enc.Encode(sub)
+	atts := make(map[string]interface{})
+	if assertion.AttributeStatement != nil {
+		for att := range assertion.AttributeStatement.Attribute {
+			val := assertion.AttributeStatement.Attribute[att].AttributeValue
+
+			switch len(val) {
+			case 0:
+				// We don't want these
+			case 1:
+				atts[assertion.AttributeStatement.Attribute[att].Name] = val[0].Value
+			default:
+				values := make([]string, len(val))
+				for i := range val {
+					values[i] = val[i].Value
+				}
+				atts[assertion.AttributeStatement.Attribute[att].Name] = values
+			}
+		}
+	}
+	enc := json.NewEncoder(w)
+	enc.Encode(atts)
 }
 
 type artfactBuffer struct {

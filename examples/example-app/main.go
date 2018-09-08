@@ -322,12 +322,9 @@ func (a *app) handleCallback(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Failed to get userinfo: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-	sub := &struct {
-		First string `json:"first"`
-		Last  string `json:"last"`
-	}{}
 	fmt.Fprintln(w, "UserInfo:")
-	userinfo.Claims(sub)
+	var u interface{}
+	userinfo.Claims(&u)
 	enc := json.NewEncoder(w)
-	enc.Encode(sub)
+	enc.Encode(u)
 }
