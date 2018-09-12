@@ -20,17 +20,17 @@ LD_FLAGS="-w -X $(REPO_PATH)/version.Version=$(VERSION)"
 build: bin/dex bin/example-app bin/grpc-client
 
 bin/dex: check-go-version
-	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/cmd/dex
+	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)
 
 bin/example-app: check-go-version
-	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/cmd/example-app
+	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/examples/example-app
 
 bin/grpc-client: check-go-version
 	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/examples/grpc-client
 
 .PHONY: release-binary
 release-binary:
-	@go build -o /go/bin/dex -v -ldflags $(LD_FLAGS) $(REPO_PATH)/cmd/dex
+	@go build -o /go/bin/dex -v -ldflags $(LD_FLAGS) $(REPO_PATH)
 
 .PHONY: revendor
 revendor:
