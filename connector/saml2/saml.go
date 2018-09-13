@@ -195,6 +195,7 @@ func (c *samlConnector) UserInfo(nameID string, w http.ResponseWriter) {
 			}
 		}
 	}
+	w.Header().Set("Content-Type", "application/json")
 	enc := json.NewEncoder(w)
 	enc.Encode(atts)
 }

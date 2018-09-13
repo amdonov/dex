@@ -1,0 +1,128 @@
+<samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
+    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Destination="http://127.0.0.1:5556/dex/callback" ID="ID_3ee7dd5e-a82f-461d-9c0a-4b46f14e4aa3" InResponseTo="_f2a3b321-6f79-4fb8-93ad-b9d4f62dc0b7" IssueInstant="2018-09-10T16:17:34.632Z" Version="2.0">
+    <saml:Issuer>http://127.0.0.1:8080/auth/realms/master</saml:Issuer>
+    <samlp:Status>
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+    </samlp:Status>
+    <saml:Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="ID_b4f857d8-9c3e-4845-8602-87bcc94805fb" IssueInstant="2018-09-10T16:17:34.632Z" Version="2.0">
+        <saml:Issuer>http://127.0.0.1:8080/auth/realms/master</saml:Issuer>
+        <saml:Subject>
+            <saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">admin</saml:NameID>
+            <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml:SubjectConfirmationData InResponseTo="_f2a3b321-6f79-4fb8-93ad-b9d4f62dc0b7" NotOnOrAfter="2018-09-10T16:18:32.632Z" Recipient="http://127.0.0.1:5556/dex/callback"/>
+            </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="2018-09-10T16:17:32.632Z" NotOnOrAfter="2018-09-10T16:18:32.632Z">
+            <saml:AudienceRestriction>
+                <saml:Audience>dex</saml:Audience>
+            </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement AuthnInstant="2018-09-10T16:17:34.632Z" SessionIndex="6dbbce2a-abe5-41c4-a0dd-a84225016b33::3cae738a-74bf-4bee-9fe5-4054d62a7c6b">
+            <saml:AuthnContext>
+                <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef>
+            </saml:AuthnContext>
+        </saml:AuthnStatement>
+        <saml:AttributeStatement>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-profile</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">offline_access</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">admin</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-identity-providers</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-clients</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-authorization</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-users</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-authorization</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">query-clients</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">create-client</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">impersonation</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-realm</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-realm</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-events</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">query-realms</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">view-identity-providers</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">query-users</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">create-realm</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-events</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-users</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-clients</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">query-groups</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-account</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">manage-account-links</saml:AttributeValue>
+            </saml:Attribute>
+            <saml:Attribute Name="Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+                <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">uma_authorization</saml:AttributeValue>
+            </saml:Attribute>
+        </saml:AttributeStatement>
+    </saml:Assertion>
+</samlp:Response>
